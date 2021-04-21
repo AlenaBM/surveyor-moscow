@@ -1,0 +1,75 @@
+.hero
+  background-color: $hero-color
+  padding-top: 20px
+  padding-bottom: 60px
+  &__wrap
+    max-width: 525px
+    display: flex
+    align-items: center
+    flex-direction: column
+  &__title
+    font-weight: bold
+    font-size: 45px
+    line-height: 65px
+    display: flex
+    align-items: center
+    text-align: center
+    color: #fff
+    text-align: center
+    margin-bottom: 76px
+  &__button
+    max-width: 418px
+    box-shadow: 0 0 30px rgba(0,0,0,0.8)
+    padding: 20px 70px
+    font-weight: bold
+    font-size: 29px
+    line-height: 40px
+    border: none
+    color: #fff
+    font-family: 'Nunito', sans-serif
+    background: linear-gradient(180deg, #525E99 0%, #25828E 90.42%)
+    transition: 0.3s
+    &:hover
+      background: linear-gradient(180deg, #525E99 0%, #25828E 90.42%)
+      box-shadow: 0 15px 20px rgba(82, 94, 153, .4)
+      transform: translateY(-7px)
+  &__arrow
+    display: block
+    margin: 0 auto
+    width: 77px
+    height: 38px
+    cursor: pointer
+    opacity: 0
+    animation: ellipseAnimated 3s infinite 1s
+.map
+  margin-left: -20px
+.animated-line
+  stroke-dashoffset: 1000
+  stroke-dasharray: 1000
+  animation: lineAnimated 8s linear 1 3s
+  animation-fill-mode: forwards
+
+@keyframes lineAnimated
+  0%
+    stroke-dashoffset: 1000
+
+  100%
+    stroke-dashoffset: 0
+.container
+  &__hero
+    display: flex
+    justify-content: space-between
+.ellipse
+  opacity: 0
+  animation: ellipseAnimated 4s infinite 1s
+  &__3, &__5, &__7
+    animation: ellipseAnimated 4s infinite 3s
+  &__6, &__8, &__10
+    animation: ellipseAnimated 4s infinite 2s
+@keyframes ellipseAnimated
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
