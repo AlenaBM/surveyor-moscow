@@ -466,24 +466,48 @@
       </div>
       <!-- /.container -->
     </section>
-    <sections class="projects">
-      <h2 class="projects__title">Проекты, в которых принимал участие</h2>
-      <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+    <section class="projects">
+      <h2 class="projects__title container">
+        Проекты, в которых принимал участие
+      </h2>
+      <div class="projects__slider swiper-container">
+        <div class="projects__wrap swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide projects__item">
+            <img
+              class="projects__item__img"
+              src="img/building.png"
+              alt="Жилой комплекс"
+            />
+          </div>
+          <div class="swiper-slide projects__item">
+            <img
+              class="projects__item__img"
+              src="img/building.png"
+              alt="Жилой комплекс"
+            />
+          </div>
+          <div class="swiper-slide projects__item">
+            <img
+              class="projects__item__img"
+              src="img/building.png"
+              alt="Жилой комплекс"
+            />
+          </div>
         </div>
+        <!-- /projects__wrap -->
 
         <div class="swiper-pagination"></div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="projects__button projects__button--prev">
+          <img src="img/arrow-slider-prev.svg" alt="Стрелка назад" />
+        </div>
+        <div class="projects__button projects__button--next">
+          <img src="img/arrow-slider-next.svg" alt="Стрелка вперед" />
+        </div>
       </div>
       <!-- /swiper-container -->
-    </sections>
+    </section>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>

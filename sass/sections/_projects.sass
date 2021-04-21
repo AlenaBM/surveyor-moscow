@@ -1,4 +1,61 @@
 .projects
   background-color: #171717
-  padding-top: 50px
+  padding-top: 80px
   padding-bottom: 40px
+  &__slider
+    position: relative
+    max-width: 1233px
+  &__wrap
+    max-width: 1020px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    position: relative
+  &__title
+    font-weight: bold
+    font-size: 32px
+    line-height: 50px
+    color: #fff
+    margin-bottom: 65px
+  &__button
+    outline: none
+    cursor: pointer
+    max-width: 70px
+    max-height: 80px
+    position: absolute
+    z-index: 999
+    &--prev
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+    &--next
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+  &__item
+    width: 305px
+    border-radius: 20px
+    background: rgba(255, 249, 249, 0.1)
+    backdrop-filter: blur(15px)
+    position: relative
+    text-align: center
+    z-index: 9
+    padding: 23px
+    &::after
+      content: ''
+      right: 0
+      left: 0
+      bottom: 0
+      z-index: 10
+      position: absolute
+      height: 90%
+      width: 100%
+      border-radius: 20px
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #55C4C4 100%)
+    &__img
+      height: 345px
+      width: 259px
+      position: relative
+      z-index: 999
+      object-fit: cover
+      border-radius: 20px
