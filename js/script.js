@@ -10,7 +10,13 @@ var projectSlider = new Swiper('.projects__slider', {
             nextEl: '.projects__button--next',
             prevEl: '.projects__button--prev',
         },
-        slidesPerView: 'auto',
+        pagination: {
+        el: '.projects__pagination',
+        clickable: true,
+        dynamicBullets: true,
+        },
+        slidesPerView: 3,
+        spaceBetween: 50,
         direction: 'horizontal'
     });
 });
