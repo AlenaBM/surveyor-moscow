@@ -6,6 +6,10 @@ body
   box-sizing: border-box
 a
   text-decoration: none
+li
+  list-style: none
+ul
+  padding: 0
 .button
   cursor: pointer
   border-radius: 15px
@@ -14,6 +18,8 @@ a
 .container
   max-width: 1020px
   margin: 0 auto
+.input
+  outline: none
 body
   &::-webkit-scrollbar
     width: 5px
@@ -26,6 +32,15 @@ body
 body
   scrollbar-color: #000
   scrollbar-width: thin
-
+.modal__message
+  scrollbar-color: transparent
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    width: 1px
+    background-color: transparent
+  &::-webkit-scrollbar-thumb
+    width: 1px
+    height: 5px
+    background-color: transparent
 $ocean-color: #41D0BF
 $hero-color: #201F1F

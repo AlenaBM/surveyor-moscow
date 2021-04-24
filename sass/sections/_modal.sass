@@ -1,0 +1,107 @@
+.modal
+  &__overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: #000
+    z-index: 1000
+    opacity: 0
+    visibility: hidden
+    &--visible
+      opacity: 0.7
+      visibility: visible
+  &__close
+    z-index: 1110
+    position: absolute
+    top: 20px
+    right: 20px
+    height: 28px
+    width: 28px
+    border-radius: 50%
+    background-color: $hero-color
+    text-align: center
+    color: #fff
+    font-weight: bold
+    font-size: 20px
+    font-family: 'Nunito', sans-serif
+    transition: 0.3s
+    &:hover
+      box-shadow: 0 0 20px rgba(0,0,0,1)
+      transition: 0.3s
+  &__request
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 650px
+    transform: translate(-50%, -50%)
+    padding: 50px
+    background-color: #fff
+    border-radius: 17px
+    color: #000
+    z-index: 1100
+    box-shadow: 0 20px 20px rgba(82, 94, 153, .4)
+    opacity: 0
+    visibility: hidden
+    &--visible
+      opacity: 1
+      visibility: visible
+  &__title
+    margin: 0 0 30px 0
+  &__form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__wrap
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+    margin-bottom: 20px
+    &__fullstring
+      flex-basis: 100%
+  &__input-name
+    font-weight: bold
+    font-size: 15px
+    line-height: 20px
+    color: $hero-color
+    font-family: 'Nunito', sans-serif
+    transition: 0.3s
+  &__button
+    margin: 0 auto
+    max-width: 318px
+    padding: 10px 50px
+    font-weight: bold
+    font-size: 20px
+    border-radius: 13px
+    border: none
+    color: #fff
+    font-family: 'Nunito', sans-serif
+    background: linear-gradient(180deg, #525E99 0%, #25828E 90.42%)
+    transition: 0.3s
+    &:hover
+      background: linear-gradient(180deg, #525E99 0%, #25828E 90.42%)
+      box-shadow: 0 0 20px rgba(0,0,0,1)
+      transform: translateY(-2px)
+.modal__input
+  background-color: #fff
+  border-radius: 6px
+  border: 1px solid $hero-color
+  padding: 0 10px
+  height: 30px
+  font-family: 'Nunito', sans-serif
+  font-size: 14px
+  font-weight: bold
+  color: #545151
+  transition: 0.3s
+  &:focus
+    box-shadow: 0 0 20px rgba(0,0,0,1)
+    color: $hero-color
+    font-weight: bold
+.modal__message
+  resize: none
+  padding-top: 5px
+  height: 45px
+  overflow-y: auto
+._error
+  box-shadow: 0 0 20px red rgba(20,50,50,1)

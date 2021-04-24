@@ -69,3 +69,29 @@
       background-repeat: no-repeat
       background-position-y: top
       background-position-x: center
+.arrow-sticky
+  z-index: 11111
+  position: fixed
+  display: none
+  bottom: 70px
+  right: 30px
+  width: 43px
+  height: 68px
+  cursor: pointer
+  &::after
+    content: ''
+    width: 50px
+    height: 90px
+    opacity: 0
+    background-image: url(../img/arrow-sticky-blur.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    top: -10px
+    position: absolute
+    z-index: 999
+    transition: 0.3s
+.arrow-sticky
+  &:hover
+    &::after
+      opacity: 1

@@ -23,18 +23,46 @@
   &__button
     outline: none
     cursor: pointer
-    max-width: 70px
-    max-height: 80px
+    width: 100px
+    height: 100px
     position: absolute
-    z-index: 999
+    z-index: 998
     &--prev
-      top: 50%
-      left: 0
+      top: 60%
+      left: 140px
       transform: translateY(-50%)
+      &::after
+        content: ''
+        width: 90px
+        height: 100px
+        opacity: 0
+        background-image: url(../img/hover-arrow.svg)
+        background-repeat: no-repeat
+        background-position: top
+        background-size: cover
+        left: 0
+        position: absolute
+        z-index: 999
+        transition: 0.3s
     &--next
-      top: 50%
-      right: 0
+      top: 60%
+      right: 140px
       transform: translateY(-50%)
+      &__img
+        float: right
+      &::after
+        content: ''
+        width: 90px
+        height: 100px
+        opacity: 0
+        background-image: url(../img/hover-arrow-next.svg)
+        background-repeat: no-repeat
+        background-position: top
+        background-size: cover
+        right: 0
+        position: absolute
+        z-index: 999
+        transition: 0.3s
   &__item
     width: 305px
     max-height: 391px
@@ -56,6 +84,8 @@
       width: 100%
       border-radius: 20px
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #41D0BF 100%)
+    &__arrow
+      cursor: pointer
     &__wrap
       height: 345px
       width: 259px
@@ -103,3 +133,7 @@
   &-pagination
     &-bullet
       background-color: #fff
+.projects__button--prev, .projects__button--next
+  &:hover
+    &::after
+      opacity: 1
