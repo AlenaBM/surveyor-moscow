@@ -12,17 +12,16 @@ document.addEventListener('DOMContentLoaded', function (){
 
 
       if (error === 0){
-        form.classList.add('__sending');
         let response = await fetch('sendmail.php', {
           method: 'POST',
           body: formData
         });
         if (response.ok) {
           let result = await response.json();
-          alert(result.message);
+          modalThanks();
+          modalThanksClose();
           formPreview.innerHTML = '';
           form.reset();
-          form.classList.remove('__sending');
         }
         else {
           alert("Ошибка");
@@ -31,6 +30,30 @@ document.addEventListener('DOMContentLoaded', function (){
       } else {
         alert('Заполните обязательные поля');
       }
+    }
+    function modalThanks(){
+      var modalDialog = $(".modal-thanks");
+      var modalOverlayCl = $(".modal__overlay");
+      var modalDialogCl = $(".modal__request");
+      var modalOverlayThanks = $(".modal-thanks__overlay");
+      modalDialog.addClass("modal-thanks__active");
+      modalOverlayThanks.addClass("modal-thanks__overlay--visible");
+      modalOverlayCl.removeClass("modal__overlay--visible");
+      modalDialogCl.removeClass("modal__request--visible");
+    }
+    function modalThanksClose(){
+      var closeModalOverlay = $(".modal-thanks__overlay--visible");
+      closeModalOverlay.on('click', closeModal);
+      var closeButton = $(".modal-thanks__close");
+      closeButton.on('click', closeModal);
+    }
+    function closeModal(event) {
+        event.preventDefault();
+        var modalDialog = $(".modal-thanks");
+        var closeOverlay = $(".modal-thanks__overlay");
+        var closeButton = $(".modal-thanks__close");
+        modalDialog.removeClass("modal-thanks__active");
+        closeOverlay.removeClass("modal-thanks__overlay--visible");
     }
     function formValidate(form){
       let error = 0;

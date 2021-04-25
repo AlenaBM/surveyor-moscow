@@ -13,12 +13,12 @@ $email = $_POST['email'];
 
 
 // Формирование modal письма
-$title = "Заявка";
+$title = "Заявка с сайта";
 $body = "
 <h2>Данные клиента:</h2>
 <b>Имя:</b> $name<br>
-<b>Номер телефона:</b> $phone<br><br>
-<b>Почта:</b> $email<br>
+<b>Номер телефона:</b> $phone<br>
+<>Почта:</> $email<br>
 <b>Адрес объекта:</b> $address<br>
 <b>Сообщение:</b><br>$message<br><br>
 ";
@@ -58,7 +58,7 @@ try {
   if (!$mail->send()) {
     $info = 'Ошибка';
   } else {
-    $info = 'Данные отправлены';
+    $info = 'Заявка создана успешно';
   }
 
   $response = ['message' => $info];

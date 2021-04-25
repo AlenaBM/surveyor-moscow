@@ -44,12 +44,6 @@ var projectSlider = new Swiper('.projects__slider', {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
-    // $("#sticky").on("click","a", function (event) {
-    //     event.preventDefault();
-    //     var id  = $(this).attr('href'),
-    //         top = $(id).offset().top;
-    //     $('body,html').animate({scrollTop: top}, 1000);
-    // });
     var menuButton = $(".experience__item__SRM");
     menuButton.on("click", function() {
         $(".experience__hiddenlist").toggleClass("experience__hiddenlist__open")
@@ -81,8 +75,10 @@ var projectSlider = new Swiper('.projects__slider', {
         event.preventDefault();
         var modalOverlay = $(".modal__overlay");
         var modalDialog = $(".modal__request");
+        var modalThanks = $(".modal-thanks");
         modalOverlay.removeClass("modal__overlay--visible");
-        modalDialog.removeClass("modal__request--visible")
+        modalDialog.removeClass("modal__request--visible");
+        modalThanks.removeClass("modal-thanks__active");
     }
  
     $(window).scroll(function(){
