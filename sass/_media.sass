@@ -78,30 +78,109 @@
       font-size: 28px
     &__link
       font-size: 24px
+  .arrow-sticky
+    right: 50%
+    transform: translateX(65%)
+    &::after
+      height: 49px
+      width: 34px
+      right: 12px
+      top: -5px
+    &__img
+      height: 40px
 @media (max-width: 992px)
+  .body
+    padding-top: 70px
   .container
-    max-width: 900px
+    max-width: 690px
+    &__hero
+      align-items: center
   .header
+    position: fixed
+    width: 100%
+    left: 0
+    right: 0
+    top: 0
+    z-index: 2222
     &__wrap
       &__lg
+        font-size: 12px
         &:hover
           color: #fff
+    &__shadow
+      height: 55px
+      top: 34px
   .navbar
     height: 40px
-    &__icon
-      display: block
-      height: 27px
-      margin-top: 8px
+    &__item
+      width: 100%
     &__link
-      display: none
+      width: 100%
+      background-image: none
+      padding-top: 0
+      font-size: 16px
+      &:hover
+        background-position-y: -300px
+        color: #fff
+  .map
+    max-height: 440px
+    max-width: 360px
   .hero
+    padding-top: 40px
+    padding-bottom: 85px
+    &__wrap
+      margin-left: 20px
+      align-items: flex-start
     &__title
-      font-size: 35px
+      font-size: 30px
+      line-height: 50px
+      text-align: left
     &__button
-      padding: 17px 70px
-      font-size: 24px
+      padding: 10px 50px
+      font-size: 20px
       &:hover
         box-shadow: 0 0 30px rgba(0,0,0,0.8)
         transform: translateY(0px)
+  .experience
+    padding-top: 50px
+    padding-bottom: 40px
+    &__title
+      font-size: 23px
+      line-height: 37px
+    &__text
+      font-size: 22px
+    &__item
+      font-size: 15px
+      line-height: 25px
+      &:hover
+        box-shadow: 0 0 30px rgba(0,0,0,1)
+        transform: translateY(0px)
+  .avatar
+    &-img
+      width: 100%
+      height: 100%
+    &-bcg
+      &__frame
+        margin-right: 20px
+        width: 160px
+        height: 170px
+  .projects
+    &__title
+      font-size: 23px
+    &__slider
+      max-width: 690px
+    &__item
+      &__wrap
+        width: 280px
+    &__button
+      top: 55%
+      &--prev
+        left: 0
+        &::after
+          background-image: none
+      &--next
+        right: 0
+        &::after
+          background-image: none
 // @media (max-width: 767px)
 // @media (min-width: 320px) and (max-width: 576px)

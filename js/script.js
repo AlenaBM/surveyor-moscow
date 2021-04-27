@@ -19,6 +19,11 @@ var projectSlider = new Swiper('.projects__slider', {
         speed: 800,
         breakpoints: {
             // when window width is >= Npx
+            768: {
+            slidesPerView: 2,
+            spaceBetween: 40
+            },
+            // when window width is >= Npx
             992: {
             slidesPerView: 3,
             spaceBetween: 30
@@ -100,11 +105,16 @@ var projectSlider = new Swiper('.projects__slider', {
         modalBody.removeClass("body__opened-modal");
     }
  
-    $(window).scroll(function(){
+    $(window).scroll(function(e){
     if ($(this).scrollTop() > 1700) {
     $('.arrow-sticky').fadeIn();
     } else {
     $('.arrow-sticky').fadeOut();
+    }
+    });
+    $(window).resize(function() {
+    if (document.body.clientWidth < 994) {
+    $('.arrow-sticky').remove();
     }
     });
     
