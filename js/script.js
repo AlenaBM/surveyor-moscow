@@ -15,10 +15,25 @@ var projectSlider = new Swiper('.projects__slider', {
         clickable: true,
         dynamicBullets: true,
         },
-        slidesPerView: 3,
-        spaceBetween: 50,
         direction: 'horizontal',
         speed: 800,
+        breakpoints: {
+            // when window width is >= Npx
+            992: {
+            slidesPerView: 3,
+            spaceBetween: 30
+            },
+            // when window width is >= Npx
+            1200: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            },
+            // when window width is >= Npx
+            1277: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            }
+        }
     });
     $("#aboutskills").on("click","a", function (event) {
         event.preventDefault();
@@ -67,8 +82,10 @@ var projectSlider = new Swiper('.projects__slider', {
     function openModal() {
         var modalOverlay = $(".modal__overlay");
         var modalDialog = $(".modal__request");
+        var modalBody = $(".body");
         modalOverlay.addClass("modal__overlay--visible");
-        modalDialog.addClass("modal__request--visible")
+        modalDialog.addClass("modal__request--visible");
+        modalBody.addClass("body__opened-modal");
     }
 
     function closeModal(event) {
@@ -79,6 +96,8 @@ var projectSlider = new Swiper('.projects__slider', {
         modalOverlay.removeClass("modal__overlay--visible");
         modalDialog.removeClass("modal__request--visible");
         modalThanks.removeClass("modal-thanks__active");
+        var modalBody = $(".body");
+        modalBody.removeClass("body__opened-modal");
     }
  
     $(window).scroll(function(){
@@ -93,5 +112,34 @@ var projectSlider = new Swiper('.projects__slider', {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
     });
-    
+    $(document).ready(function() {
+        $(".modal__input__num").mask('+7 (000) 000-00-00')
+    });
+    $(document).keydown(function(event) {
+        if (event.keyCode == 27) {
+            var modalOverlayEsc = $(".modal__overlay");
+            var modalDialogEsc = $(".modal__request");
+            modalOverlayEsc.removeClass("modal__overlay--visible");
+            modalDialogEsc.removeClass("modal__request--visible")
+        }
+    });
+    $('.form').each(function() {
+        $(this).validate({
+            errorClass: "invalid",
+            messages: {
+                name: {
+                    required: "Введите имя",
+                    minlength: "Имя не должно быть короче двух букв",
+                },
+                email: {
+                    required: "Введите email адрес",
+                    email: "Email адрес должен быть подобного формата: name@domain.com",
+                },
+                phone: {
+                    required: "Введите номер телефона",
+                    minlength: "Пожалуйста, введите полный номер телефона",
+                },
+            },
+        })
+    });
 });

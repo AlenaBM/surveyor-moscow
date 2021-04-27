@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function (){
           alert("Ошибка");
           form.classList.remove('__sending');
         }
-      } else {
-        alert('Заполните обязательные поля');
-      }
+      } 
     }
     function modalThanks(){
       var modalDialog = $(".modal-thanks");
@@ -46,12 +44,12 @@ document.addEventListener('DOMContentLoaded', function (){
       closeModalOverlay.on('click', closeModal);
       var closeButton = $(".modal-thanks__close");
       closeButton.on('click', closeModal);
+      
     }
     function closeModal(event) {
         event.preventDefault();
         var modalDialog = $(".modal-thanks");
         var closeOverlay = $(".modal-thanks__overlay");
-        var closeButton = $(".modal-thanks__close");
         modalDialog.removeClass("modal-thanks__active");
         closeOverlay.removeClass("modal-thanks__overlay--visible");
     }

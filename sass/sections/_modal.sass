@@ -17,7 +17,7 @@
     position: absolute
     top: 20px
     right: 20px
-    height: 28px
+    height: 27px
     width: 28px
     border-radius: 50%
     background-color: $hero-color
@@ -100,6 +100,7 @@
     font-weight: bold
 .modal__message
   resize: none
+  outline: none
   padding-top: 5px
   height: 45px
   overflow-y: auto
@@ -108,8 +109,8 @@
 .modal-thanks
   font-size: 23px
   font-weight: bold
-  background-color: #000
-  color: #fff
+  background-color: #fff
+  color: $hero-color
   padding: 26px
   border-radius: 15px
   z-index: 1220
@@ -129,12 +130,13 @@
     position: absolute
     top: 5px
     right: 5px
-    height: 23px
-    width: 23px
+    height: 20px
+    width: 21px
     border-radius: 50%
     text-align: center
-    color: #fff
-    font-size: 14px
+    color: $hero-color
+    font-size: 15px
+    font-weight: bold
     font-family: 'Nunito', sans-serif
     transition: 0.3s
     &:hover
@@ -153,3 +155,11 @@
     &--visible
       opacity: 0.7
       visibility: visible
+.body__opened-modal
+  overflow: hidden
+  padding-right: 5px
+.invalid
+  font-size: 13px
+  font-family: 'Nunito', sans-serif
+  font-weight: bold
+  color: #A1152E

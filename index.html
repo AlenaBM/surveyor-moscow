@@ -16,9 +16,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="fav/site.webmanifest" />
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Геодезист - Александр. Москва</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header" id="top">
       <div class="header__info">
         <div class="container container__info">
@@ -40,12 +61,21 @@
         <ul class="navbar">
           <li class="navbar__item" id="aboutskills">
             <a href="#info" class="navbar__link">Обо мне</a>
+            <svg class="icon navbar__icon">
+              <use xlink:href="img/sprite.svg#aboutme"></use>
+            </svg>
           </li>
           <li class="navbar__item" id="portfolio">
             <a href="#projects" class="navbar__link">Портфолио</a>
+            <svg class="icon navbar__icon">
+              <use xlink:href="img/sprite.svg#portfolio"></use>
+            </svg>
           </li>
           <li class="navbar__item" id="contacts">
             <a href="#numbers" class="navbar__link">Контакты</a>
+            <svg class="icon navbar__icon">
+              <use xlink:href="img/sprite.svg#contacts-nav"></use>
+            </svg>
           </li>
         </ul>
       </div>
@@ -404,7 +434,7 @@
         <!-- /.hero__wrap -->
       </div>
       <!-- /.container -->
-      <div id="arrow-down">
+      <div id="arrow-down" class="arrow-down">
         <a href="#info" class="hero__arrow">
           <svg
             width="112"
@@ -482,53 +512,58 @@
         <div class="experience__wrap">
           <ul class="experience__list">
             <li class="experience__item experience__item__SRM">
-              <img
+              <!-- <img
                 class="experience__arrow experience__arrow__first"
                 src="img/arrow-list.svg"
                 alt="Открыть список"
-              />Сопровождением и контролем СМР
+              /> -->
+              Сопровождением и контролем СМР
+              <div class="experience__hiddenlist">
+                <ul class="experience__hiddenul">
+                  <li class="experience__hiddenul__item">
+                    Инженерные коммуникации
+                  </li>
+                  <li class="experience__hiddenul__item">
+                    Подсчет объемов земленных масс
+                  </li>
+                  <li class="experience__hiddenul__item">
+                    Подсчет объемов воздушных масс
+                  </li>
+                </ul>
+              </div>
+              <!-- /.experience__hiddenlist -->
             </li>
-            <div class="experience__hiddenlist">
-              <ul class="experience__hiddenul">
-                <li class="experience__hiddenul__item">
-                  Инженерные коммуникации
-                </li>
-                <li class="experience__hiddenul__item">
-                  Подсчет объемов земленных масс
-                </li>
-                <li class="experience__hiddenul__item">
-                  Подсчет объемов воздушных масс
-                </li>
-              </ul>
-            </div>
-            <!-- /.experience__hiddenlist -->
             <li class="experience__item">
-              <img
+              <!-- <img
                 class="experience__arrow"
                 src="img/arrow-list.svg"
                 alt="Открыть список"
-              />Обмером и выносом в натуру границ земельных участков
+              /> -->
+              Обмером и выносом в натуру границ земельных участков
             </li>
             <li class="experience__item">
-              <img
+              <!-- <img
                 class="experience__arrow"
                 src="img/arrow-list.svg"
                 alt="Открыть список"
-              />Топографической съемкой
+              /> -->
+              Топографической съемкой
             </li>
             <li class="experience__item">
-              <img
+              <!-- <img
                 class="experience__arrow"
                 src="img/arrow-list.svg"
                 alt="Открыть список"
-              />Наземным лазерным сканированием
+              /> -->
+              Наземным лазерным сканированием
             </li>
             <li class="experience__item">
-              <img
+              <!-- <img
                 class="experience__arrow"
                 src="img/arrow-list.svg"
                 alt="Открыть список"
-              />Подготовкой исполнительной документации
+              /> -->
+              Подготовкой исполнительной документации
             </li>
           </ul>
         </div>
@@ -704,6 +739,7 @@
               placeholder="Имя"
               name="name"
               minlength="2"
+              required
               autocomplete="name"
             />
           </div>
@@ -713,11 +749,12 @@
             <input
               type="tel"
               id="phone"
-              class="input modal__input __req"
+              class="input modal__input __req modal__input__num"
               placeholder="7 (000) 000-00-00"
               name="phone"
               minlength="18"
               autocomplete="tel"
+              required
             />
           </div>
           <!-- /.modal__wrap -->
@@ -730,6 +767,7 @@
               placeholder="Почта"
               name="email"
               autocomplete="email"
+              required
             />
           </div>
           <!-- /.modal__wrap -->
@@ -773,6 +811,8 @@
     ></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
     <script src="js/form-script.js"></script>
     <script src="js/script.js"></script>
