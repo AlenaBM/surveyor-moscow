@@ -79,13 +79,7 @@
     &__link
       font-size: 24px
   .arrow-sticky
-    right: 50%
-    transform: translateX(65%)
-    &::after
-      height: 49px
-      width: 34px
-      right: 12px
-      top: -5px
+    visibility: hidden
     &__img
       height: 40px
 @media (max-width: 992px)
@@ -182,5 +176,228 @@
         right: 0
         &::after
           background-image: none
-// @media (max-width: 767px)
-// @media (min-width: 320px) and (max-width: 576px)
+  .contacts
+    padding-top: 90px
+    height: 600px
+    &__title
+      font-size: 23px
+    &__link
+      font-size: 20px
+      &:hover
+        color: #fff
+        transform: translateY(0px)
+  .fab
+    font-size: 35px
+  .modal
+    &-thanks
+      padding: 18px
+      font-size: 19px
+      &__close
+        height: 17px
+        width: 18px
+        font-size: 13px
+    &__request
+      padding: 30px
+    &__button
+      &:hover
+        box-shadow: none
+        transform: translateY(0px)
+@media (max-width: 767px)
+  .body
+    padding-top: 0
+    padding-right: 0
+  .container
+    max-width: 500px
+    &__info
+      display: block
+  .map
+    display: none
+  .header
+    position: relative
+    &__number
+      display: none
+    &__navbar
+      display: none
+    &__shadow
+      display: none
+    &__info
+      background: linear-gradient(180deg, #000000 0%, #171717 54.48%, #201F1F 100%)
+      padding-top: 10px
+      padding-bottom: 15px
+    &__wrap
+      text-align: right
+  .modal
+    &__request
+      width: 430px
+    &__wrap
+      flex-basis: 100%
+  .hero
+    padding-top: 0px
+    padding-bottom: 60px
+    &__wrap
+      align-items: center
+      margin: 0 auto
+    &__taheometr
+      display: block
+      width: 200px
+      height: 270px
+    &__button
+      margin-bottom: 20px
+    &__title
+      font-size: 28px
+      text-align: center
+      margin-bottom: 10px
+      max-width: 450px
+      line-height: 40px
+    &__number
+      margin: 0 auto
+      display: inline-block
+      font-weight: bold
+      font-size: 15px
+      line-height: 20px
+      color: $ocean-color
+      margin-bottom: 20px
+  .mobile-menu
+    display: block
+    position: fixed
+    width: 100%
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 2222
+    background-color: #000
+    border-radius: 20px 20px 0 0
+    padding: 10px 60px 0 60px
+    &__ul
+      display: flex
+      justify-content: space-between
+      margin: 0
+    &__icon
+      height: 50px
+      width: 40px
+    &__item
+      &_fonticon
+        padding-top: 5px
+  .fa-address-book
+    font-size: 37px
+    color: #fff
+  .experience
+    &__header
+      flex-direction: column
+    &__title
+      text-align: center
+      font-size: 20px
+      line-height: 35px
+      margin-bottom: 0
+    &__text
+      display: none
+    &__text-mobile
+      display: block
+      font-size: 20px
+      line-height: 35px
+      color: #fff
+      font-weight: bold
+      text-align: center
+      margin: 0
+    &__header
+      margin-bottom: 0
+    &__list
+      grid-template-columns: 1fr 1fr
+  .projects
+    padding-top: 30px
+    &__slider
+      max-width: 500px
+    &__item
+      width: 320px
+@media (min-width: 320px) and (max-width: 576px)
+  .container
+    max-width: 300px
+  .hero
+    padding-top: 0
+    &__title
+      font-size: 25px
+      max-width: 210px
+      margin-top: 0
+    &__taheometr
+      height: 220px
+  .mobile-menu
+    &__icon
+      height: 40px
+      width: 30px
+  .fa-address-book
+    font-size: 28px
+  .modal
+    &__request
+      max-width: 300px
+  .experience
+    &__list
+      grid-template-columns: 1fr
+    &__title
+      line-height: 30px
+      font-size: 22px
+    &__item
+      height: auto
+  .avatar
+    &-bcg
+      &__frame
+        width: 140px
+        height: 150px
+        margin: 0 auto
+  .projects
+    padding-top: 0
+    &__title
+      line-height: 30px
+      font-size: 22px
+    &__slider
+      max-width: 300px
+    &__item
+      width: 260px
+      max-height: 350px
+      &__wrap
+        width: 225px
+        height: 310px
+    &__wrap
+      height: 410px
+    &__button
+      width: 40px
+      height: 40px
+      &--prev
+        &__img
+          width: 25px
+      &--next
+        &__img
+          width: 25px
+  .contacts
+    padding-top: 50px
+    &__maincontacts
+      margin-bottom: 38px
+    &__title
+      margin-bottom: 20px
+    &__mainitem
+      margin-bottom: 0
+    &__wrap
+      flex-direction: column
+    &__nets
+      display: none
+    &__links
+      display: flex
+      flex-direction: row
+      width: 220px
+      justify-content: space-between
+      &_item
+        text-align: center
+  .container
+    &__contacts
+      text-align: center
+  .button
+    &-footer
+      display: block
+      padding: 8px 50px
+      font-size: 18px
+      margin-bottom: 30px
+.fa-whatsapp, .fa-telegram-plane, .fa-viber
+  margin-right: 0
+.fab
+  font-size: 47px
+.footer-data
+  display: none

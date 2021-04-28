@@ -19,6 +19,18 @@ var projectSlider = new Swiper('.projects__slider', {
         speed: 800,
         breakpoints: {
             // when window width is >= Npx
+            320: {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30
+            },
+            // when window width is >= Npx
+            370: {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 100
+            },
+            // when window width is >= Npx
             768: {
             slidesPerView: 2,
             spaceBetween: 40
@@ -59,6 +71,24 @@ var projectSlider = new Swiper('.projects__slider', {
         $('body,html').animate({scrollTop: top}, 1000);
     });
     $("#arrow-down").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#service").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#portf").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#cont").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
