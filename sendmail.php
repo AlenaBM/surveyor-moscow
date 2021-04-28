@@ -38,7 +38,7 @@ try {
   // Настройки вашей почты
   $mail->Host       = 'mail.alena-web.ru'; // SMTP сервера вашей почты
   $mail->Username   = 'alena@alena-web.ru'; // Логин на почте
-  $mail->Password   = 'UriAl1998temple'; // Пароль на почте
+  
   $mail->SMTPSecure = 'ssl';
   $mail->SMTPAutoTLS = false;
   $mail->SMTPSecure = false;
